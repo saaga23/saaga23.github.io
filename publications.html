@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications — Sunday Aspita Abraham</title>
+    <meta name="description" content="Selected publications and research papers by Sunday Aspita Abraham.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://saaga23.github.io/publications.html">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">S.A. Abraham</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="publications.html" class="nav-link active">Publications</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="talks.html" class="nav-link">Talks</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Publications</h1>
+                <p class="section-lead">A complete list of research works. Status badges reflect the verified state of each submission.</p>
+
+                <div class="publication-list">
+                    <article class="publication-card">
+                        <h3>Bridging the Domain Gap: Transfer Learning and Aggressive Fine-Tuning for Robust Plant Disease Detection in Low-Resource African Agriculture</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham, Olanloye Dauda Odunayo, Abidemi Emmanuel Adeniyi, Qurrat Ul Ain Mughal — <em>Proceedings of Machine Learning Research 319</em> (2026)</p>
+                        <p class="pub-status"><span class="badge badge-published">Published</span></p>
+                        <p>Field-collected dataset from real farms in southwestern Nigeria. Two-phase progressive fine-tuning of MobileNetV2 pushes tomato accuracy from 34.69% to 97.96% and cassava from 52.42% to 98.39%. Key insight: in low-resource agriculture, training discipline matters more than architecture choice.</p>
+                        <div class="pub-meta-details">
+                            <span>Dataset: 1,742 photographs (Ibadan & Osun States)</span>
+                            <span>Hardware: Free Kaggle CPU (no GPU)</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="http://proceedings.mlr.press/v319/abraham26a.html" target="_blank" rel="noopener">Paper</a>
+                            <a href="https://github.com/saaga23/plant_disease_detection_web_app" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+
+                    <article class="publication-card">
+                        <h3>Graph Spectral Entropy: A Neuro-Symbolic Quality Control Metric for Industrial Generative AI Safety Instruction Verification</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham — <em>IEEE IES Generative AI Challenge 2026</em></p>
+                        <p class="pub-status"><span class="badge badge-accepted">Selected for challenge track</span></p>
+                        <p>Proposes Graph Spectral Entropy (GSE), a neuro-symbolic metric operating on the signed Laplacian of sentence dependency-parse graphs to detect safety-critical semantic corruption in LLM-generated industrial text. Hybrid classifier achieves ROC-AUC 0.903 (F1=0.835) on 1,191 OSHA sentence pairs, outperforming BLEU (0.612) and BERTScore (0.622) by ~0.29 AUC points. Produces bootstrap confidence intervals compatible with EU AI Act Article 9.</p>
+                        <div class="pub-meta-details">
+                            <span>Dataset: 1,191 sentence pairs (29 CFR Part 1910)</span>
+                            <span>Latency: &lt;10 ms per pair</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://github.com/saaga23/mech-interp-safety-demo" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+
+                    <article class="publication-card">
+                        <h3>AfriKnow: Calibration Disparity on Culturally Sensitive African versus European Knowledge in LLMs from Two Families</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham — <em>Under review</em></p>
+                        <p class="pub-status"><span class="badge badge-under-review">Under Review</span></p>
+                        <p>A 2,520-record calibration audit of seven LLMs (Claude-Sonnet-4.6, DeepSeek-V3.2, Gemini-2.5-Flash-Lite, Gemma-4-31B, GPT-4o-mini, GPT-4.1-Nano, Llama-3.3-70B) using Global-MMLU African vs European splits. Finds that the previously reported "Africa is overconfident" pattern is largely an artifact of benchmark source selection. Deployed end-to-end at ~$0.66 with zero human annotation.</p>
+                        <div class="pub-links">
+                            <a href="https://github.com/saaga23" target="_blank" rel="noopener">Code (upcoming)</a>
+                        </div>
+                    </article>
+
+                    <article class="publication-card">
+                        <h3>ProverbEval-Yoruba: Cultural Reasoning Evaluation</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham — <em>In preparation</em></p>
+                        <p class="pub-status"><span class="badge badge-wip">In Preparation</span></p>
+                        <p>A 3,000+ Yoruba proverb benchmark with expert human validation measuring whether LLMs understand culturally embedded meaning or rely on Westernized shortcuts. Benchmarks GPT-4o, Gemini, and DeepSeek under explicit Chain-of-Thought prompting.</p>
+                    </article>
+
+                    <article class="publication-card">
+                        <h3>ADIP: Open Arabic Document AI Benchmark</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham et al. — <em>Submitted</em></p>
+                        <p class="pub-status"><span class="badge badge-submitted">Submitted</span></p>
+                        <p>Co-authoring the ADIP Arabic Document AI Benchmark paper. Submitted to the Arabic NLP Workshop @ ACL 2026. Built a public Gradio leaderboard on Hugging Face Spaces supporting reproducible evaluation of Arabic OCR and document-understanding models.</p>
+                    </article>
+
+                    <article class="publication-card">
+                        <h3>Beyond Hallucination: Parameter-Free Retrieval Outperforms Distilled Transformers in Low-Resource Yoruba Translation</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham — <em>IndabaX Nigeria 2026</em>, Track 9: NLP & Low-Resource Languages</p>
+                        <p class="pub-status"><span class="badge badge-rejected">Rejected</span></p>
+                        <p>A two-stage BM25 + NCD re-ranking pipeline achieves BLEU 32.40 vs NLLB-200-600M's 8.78 on OPUS-100 Yoruba. Bootstrap resampling (N=1,000) confirms statistical significance (p &lt; 0.05). Demonstrates green AI and hallucination-resistant translation on commodity CPUs.</p>
+                    </article>
+
+                    <article class="publication-card">
+                        <h3>What Happens to AI When the Lights Go Out? Infrastructure-Aware Robustness Benchmarking of Vision & NLP Models Under African Deployment Conditions</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham — <em>Data Science Africa (DSA) 2026</em>, Makerere University, Kampala</p>
+                        <p class="pub-status"><span class="badge badge-presented">Oral Presentation</span></p>
+                        <p>Benchmarked robustness and performance degradation of CV and NLP models under simulated infrastructure failures and power grid challenges typical of African deployment environments. Oral presentation delivered 20–24 July 2026. Travel and logistics fully covered by Makerere University.</p>
+                    </article>
+
+                    <article class="publication-card">
+                        <h3>Bridging Data Gaps with AI: Cross-Sectoral Deployment of Machine Learning for Public Health, Defense, and Agriculture in Nigeria</h3>
+                        <p class="pub-meta">Sunday Aspita Abraham — <em>ANSHK Research Forum 2025</em>, Hong Kong</p>
+                        <p class="pub-status"><span class="badge badge-presented">Presented</span></p>
+                        <p>Presented cross-sectoral ML deployment work spanning public health, defense, and agriculture in Nigeria at ANSHK Research Forum 2025, 9 August 2025.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p> Sunday Aspita Abraham. Built with care. Last updated: August 2026.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — Sunday Aspita Abraham</title>
+    <meta name="description" content="Research interests, themes, and methodology of Sunday Aspita Abraham.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://saaga23.github.io/research.html">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">S.A. Abraham</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="research.html" class="nav-link active">Research</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="talks.html" class="nav-link">Talks</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Research</h1>
+                <p class="section-lead">My research investigates how AI systems perform in low-resource, African, and safety-critical contexts — and builds practical tools that make them more reliable.</p>
+
+                <div class="research-themes">
+                    <div class="theme-card">
+                        <h3>Low-Resource NLP & African Language Technology</h3>
+                        <p>I work on NLP for languages with limited digital resources, particularly Yoruba. My work asks whether we can build effective translation and reasoning systems without expensive neural generation — and whether parameter-free methods can outperform distilled transformers on commodity hardware.</p>
+                        <p><strong>Evidence:</strong> Beyond Hallucination (IndabaX), ProverbEval-Yoruba (EACL 2027 target), Multi-API Disagreement for African MT (EMNLP 2026 target).</p>
+                    </div>
+
+                    <div class="theme-card">
+                        <h3>LLM Evaluation & Calibration</h3>
+                        <p>I design benchmarks that expose hidden failures in large language models. My AfriKnow audit asks whether LLMs are systematically overconfident about African knowledge — and finds that the popular narrative is mostly an artifact of benchmark design, not model bias.</p>
+                        <p><strong>Evidence:</strong> AfriKnow (under review, ARR Oct 2026), ProverbEval-Yoruba.</p>
+                    </div>
+
+                    <div class="theme-card">
+                        <h3>AI Safety & Industrial Verification</h3>
+                        <p>I build neuro-symbolic quality-control metrics for safety-critical AI outputs. My Graph Spectral Entropy metric detects semantic corruption in LLM-generated industrial safety instructions before they reach human operators.</p>
+                        <p><strong>Evidence:</strong> Graph Spectral Entropy (IEEE IES Generative AI Challenge 2026, selected for challenge track), mechanistic interpretability demos.</p>
+                    </div>
+
+                    <div class="theme-card">
+                        <h3>Computer Vision for African Agriculture</h3>
+                        <p>I apply transfer learning to plant disease detection using field photographs from Nigerian farms. The central finding: in low-resource agriculture, training discipline (progressive fine-tuning protocols, aggressive regularization) matters more than choosing a larger architecture.</p>
+                        <p><strong>Evidence:</strong> Plant Disease Detection (PMLR 319, 2026).</p>
+                    </div>
+
+                    <div class="theme-card">
+                        <h3>Green AI & Efficient Deployment</h3>
+                        <p>I advocate for AI systems that run on commodity CPUs and free-tier hardware. My work on parameter-free retrieval, progressive fine-tuning, and Rust-based systems reflects a commitment to making AI accessible in infrastructure-constrained environments.</p>
+                        <p><strong>Evidence:</strong> context-rs (Rust Africa Hackathon), Kaggle CPU-trained plant disease model, BM25+NCD Yoruba translation pipeline.</p>
+                    </div>
+
+                    <div class="theme-card">
+                        <h3>Cultural AI & Westernized Bias</h3>
+                        <p>I investigate whether state-of-the-art LLMs truly understand non-Western knowledge or whether they rely on cultural shortcuts. This includes benchmarking proverbs, calibrating knowledge across cultures, and designing evaluation protocols that surface Westernized bias.</p>
+                        <p><strong>Evidence:</strong> ProverbEval-Yoruba, AfriKnow.</p>
+                    </div>
+                </div>
+
+                <div class="section-cta">
+                    <a href="publications.html" class="btn btn-secondary">View publications</a>
+                    <a href="projects.html" class="btn btn-secondary">View projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p> Sunday Aspita Abraham. Built with care. Last updated: August 2026.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

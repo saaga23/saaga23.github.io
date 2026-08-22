@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Sunday Aspita Abraham</title>
+    <meta name="description" content="Selected research and engineering projects by Sunday Aspita Abraham.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://saaga23.github.io/projects.html">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">S.A. Abraham</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="talks.html" class="nav-link">Talks</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Projects</h1>
+                <p class="section-lead">Selected research and engineering projects. Each is built from scratch, documented, and linked to public evidence.</p>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Plant Disease Detection</h3>
+                            <span class="project-tag">Computer Vision · Agriculture</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> Smallholder farmers in Nigeria lose up to 80% of crops to undiagnosed diseases. Existing tools are not trained on African field conditions.</p>
+                        <p class="project-approach"><strong>Approach:</strong> Built a CNN-based detection system using MobileNetV2 trained on 1,742 manually collected field photographs from Ibadan and Osun States, Nigeria. Two-phase progressive fine-tuning (frozen backbone → unfreeze top 50%). Delivered as a web app (Python/Streamlit) and an Android mobile app (Java).</p>
+                        <p class="project-result"><strong>Result:</strong> 97.96% tomato accuracy, 98.39% cassava accuracy — all on free Kaggle CPU hardware. Published at PMLR 2026. Dataset and models publicly available.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/saaga23/plant_disease_detection_web_app" target="_blank" rel="noopener">Web App</a>
+                            <a href="https://github.com/saaga23/AI-plant-disease-detection-mobile-app-using-CNN-deep-learning-and-java-android-studio" target="_blank" rel="noopener">Android App</a>
+                            <a href="http://proceedings.mlr.press/v319/abraham26a.html" target="_blank" rel="noopener">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Graph Spectral Entropy (GSE)</h3>
+                            <span class="project-tag">AI Safety · NLP</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> Industrial LLM-generated safety instructions can silently drop critical constraints (negation, modality, conditions), creating liability and safety risks.</p>
+                        <p class="project-approach"><strong>Approach:</strong> Designed GSE, a neuro-symbolic metric operating on the signed Laplacian of sentence dependency-parse graphs. Detects safety-critical semantic corruption in real time using spectral entropy deltas and a hybrid logistic classifier with 11 structural features.</p>
+                        <p class="project-result"><strong>Result:</strong> Hybrid classifier achieves ROC-AUC 0.903 (F1=0.835), outperforming BLEU (0.612) and BERTScore (0.622) by ~0.29 AUC points. Sub-10ms latency per pair. Produces bootstrap confidence intervals compatible with EU AI Act Article 9. Selected for IEEE IES Generative AI Challenge 2026.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/saaga23/mech-interp-safety-demo" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>AfriKnow</h3>
+                            <span class="project-tag">LLM Evaluation · Ethics</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> Are LLMs systematically overconfident about African knowledge? The "Africa is overconfident" narrative suggests models are more wrong-but-confident on African topics.</p>
+                        <p class="project-approach"><strong>Approach:</strong> Built a 2,520-record calibration audit comparing African vs European knowledge splits across seven LLMs (Claude-Sonnet-4.6, DeepSeek-V3.2, Gemini-2.5-Flash-Lite, Gemma-4-31B, GPT-4o-mini, GPT-4.1-Nano, Llama-3.3-70B) sourced from Global-MMLU. Measures verbalized confidence (VCE), Expected Calibration Error (ECE), Brier score, and confidence-hit ratio using mixed-effects models.</p>
+                        <p class="project-result"><strong>Result:</strong> The "Africa is overconfident" pattern is largely an artifact of benchmark source selection. Once you compare like-with-like and control for the source of the benchmark, the calibration gap vanishes. Deployed end-to-end at ~$0.66 with zero human annotation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/saaga23" target="_blank" rel="noopener">Code (upcoming)</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>ProverbEval-Yoruba</h3>
+                            <span class="project-tag">Cultural AI · NLP</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> Do LLMs understand culturally embedded meaning, or do they rely on Westernized shortcuts when reasoning about non-Western knowledge?</p>
+                        <p class="project-approach"><strong>Approach:</strong> Constructed a 3,000+ Yoruba proverb benchmark with a Quality Control Layer (expert human validation). Benchmarked GPT-4o, Gemini, and DeepSeek under explicit Chain-of-Thought prompting.</p>
+                        <p class="project-result"><strong>Result:</strong> Exposes Westernized bias ("Cultural Hallucination") in state-of-the-art models. Targeting EACL 2027.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Beyond Hallucination: Parameter-Free Yoruba Translation</h3>
+                            <span class="project-tag">Low-Resource NLP · Green AI</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> Neural machine translation models for low-resource languages like Yoruba require expensive GPU inference and still hallucinate.</p>
+                        <p class="project-approach"><strong>Approach:</strong> Replaced neural generation with a two-stage parameter-free pipeline: BM25 sparse filtering (k=50, &lt;40ms) + Normalized Compression Distance (NCD) re-ranking using gzip compression.</p>
+                        <p class="project-result"><strong>Result:</strong> BLEU 32.40 vs NLLB-200-600M's 8.78 on OPUS-100 Yoruba. Bootstrap resampling (N=1,000) confirms p &lt; 0.05. Stable across sentence lengths. Runs on commodity CPUs.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/saaga23" target="_blank" rel="noopener">Code (upcoming)</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>context-rs</h3>
+                            <span class="project-tag">Systems · Rust</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> High-level context-management wrappers add overhead and memory pressure in resource-constrained deployments.</p>
+                        <p class="project-approach"><strong>Approach:</strong> Implemented a robust context-management layer in Rust prioritizing execution speed and memory safety over high-level abstractions. Built for the Rust Africa Hackathon 2026.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/saaga23/context-rs" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Military Predictive Analytics Dashboard</h3>
+                            <span class="project-tag">Data Engineering · Security</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> Operational logistics data fragmented across multiple battalions with no unified command-level view.</p>
+                        <p class="project-approach"><strong>Approach:</strong> Architected a secure Python + Streamlit dashboard consolidating live feeds from multiple units. Implemented strict Role-Based Access Control (RBAC) with audit logging.</p>
+                        <p class="project-result"><strong>Result:</strong> Reduced equipment-downtime reporting lag from 3 weeks to 48 hours. 18+ months of continuous operation with zero data breaches.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>RenAIssance OCR Pipeline</h3>
+                            <span class="project-tag">Heritage Tech · OCR</span>
+                        </div>
+                        <p class="project-problem"><strong>Problem:</strong> African manuscripts and historical documents remain undigitized due to lack of specialized OCR tools for regional scripts and layouts.</p>
+                        <p class="project-approach"><strong>Approach:</strong> Building a Masked Autoencoder (MAE)-based OCR pipeline for African manuscript digitization. Part of the broader RenAIssance initiative.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/saaga23/RenAIssance-MAE-OCR-Pipeline" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p> Sunday Aspita Abraham. Built with care. Last updated: August 2026.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
